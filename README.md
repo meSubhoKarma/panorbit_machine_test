@@ -1,5 +1,7 @@
 # Panorbit Machine Test
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f9f15d57-21bb-4be0-a9e8-7a1ae6144971/deploy-status)](https://app.netlify.com/sites/panorbit-machine-test/deploys)
+
 Hello, here's the repository containing the React App Source Code for the problem given in the Panorbit Machine Test document.
 
 - Fork the repo
