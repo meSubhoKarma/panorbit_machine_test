@@ -1,5 +1,6 @@
 {
   "name": "panorbit_machine_test",
+  "homepage": "https://panorbit-machine-test.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import styled from "styled-components"
 import { PrimaryLink, HoverLink } from "../ui/elements/Link"
 import { NavLine, NavLinkWrapper } from "../ui/elements/Wrapper"
 import { Nav } from "../ui/elements/Navbar"
