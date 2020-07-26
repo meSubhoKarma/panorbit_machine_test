@@ -1,6 +1,6 @@
 # Panorbit Machine Test
 
-Hello, here's the repository containing the React App for the problem given in the Panorbit Machine Test document.
+Hello, here's the repository containing the React App Source Code for the problem given in the Panorbit Machine Test document.
 
 - Fork the repo
 - Follow the below instructions
