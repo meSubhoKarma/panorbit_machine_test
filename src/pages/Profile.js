@@ -33,13 +33,13 @@ import {
   ExtraWrapper,
 } from "../ui/elements/Wrapper"
 import {
-  SubHeader,
   Title,
-  Details,
-  SubTitle,
   SubText,
   Text,
-  DropText,
+  SubTitle,
+  LightSubTitle,
+  SubHeader,
+  LightTitle,
 } from "../ui/elements/Typography"
 import {
   ProfileLarge,
@@ -58,11 +58,11 @@ function Dropdown({ user }) {
     <DropdownContainer>
       <DropdownDetails>
         <ProfileSmall src={`${user.profilepicture}`} />
-        <SubHeader style={{ marginBottom: "0.5rem" }}>{user.name}</SubHeader>
-        <SubTitle style={{ marginTop: "0.2rem", marginBottom: "1.6rem" }}>
+        <SubTitle style={{ marginBottom: "0.5rem" }}>{user.name}</SubTitle>
+        <LightSubTitle style={{ marginTop: "0.2rem", marginBottom: "1.6rem" }}>
           {user.email}
-        </SubTitle>
-        <ExtraWrapper>
+        </LightSubTitle>
+        <ExtraWrapper to={`/${data.users[2].id}`}>
           <ProfileThumb
             style={{
               width: "3.2rem",
@@ -72,9 +72,9 @@ function Dropdown({ user }) {
             }}
             src={`${data.users[2].profilepicture}`}
           />
-          <DropText>{data.users[2].name}</DropText>
+          <Text>{data.users[2].name}</Text>
         </ExtraWrapper>
-        <ExtraWrapper>
+        <ExtraWrapper to={`/${data.users[3].id}`}>
           <ProfileThumb
             style={{
               width: "3.2rem",
@@ -84,7 +84,7 @@ function Dropdown({ user }) {
             }}
             src={`${data.users[3].profilepicture}`}
           />
-          <DropText>{data.users[3].name}</DropText>
+          <Text>{data.users[3].name}</Text>
         </ExtraWrapper>
         <SmallButton to="/landing">Sign out</SmallButton>
       </DropdownDetails>
@@ -110,7 +110,7 @@ function Profile({ match }) {
           <DetailsSectionWrapper>
             <DetailsTitleWrapper>
               <SectionWrapper3>
-                <SubHeader>Profile</SubHeader>
+                <Title style={{ marginLeft: "0rem" }}>Profile</Title>
               </SectionWrapper3>
 
               <SectionWrapper2>
@@ -136,16 +136,16 @@ function Profile({ match }) {
 
                   <NameDetailsSection>
                     <NameDetailsTitleSection>
-                      <SubTitle>Username :</SubTitle>
-                      <SubTitle>E-mail :</SubTitle>
-                      <SubTitle>Phone :</SubTitle>
-                      <SubTitle>Website :</SubTitle>
+                      <LightTitle>Username :</LightTitle>
+                      <LightTitle>E-mail :</LightTitle>
+                      <LightTitle>Phone :</LightTitle>
+                      <LightTitle>Website :</LightTitle>
                     </NameDetailsTitleSection>
                     <NameDetailsFillSection>
-                      <Details>{user.username}</Details>
-                      <Details>{user.email}</Details>
-                      <Details>{user.phone}</Details>
-                      <Details>{user.website}</Details>
+                      <Title>{user.username}</Title>
+                      <Title>{user.email}</Title>
+                      <Title>{user.phone}</Title>
+                      <Title>{user.website}</Title>
                     </NameDetailsFillSection>
                   </NameDetailsSection>
                 </DetailsSubContentWrapper1>
@@ -154,20 +154,22 @@ function Profile({ match }) {
 
                 <DetailsSubContentWrapper2>
                   <CompanyNameWrapper>
-                    <SubTitle style={{ marginBottom: "-1rem" }}>
+                    <LightTitle style={{ marginBottom: "-1rem" }}>
                       Company
-                    </SubTitle>
+                    </LightTitle>
                   </CompanyNameWrapper>
                   <NameDetailsSection2>
                     <NameDetailsTitleSection>
-                      <SubTitle>Name :</SubTitle>
-                      <SubTitle>catchphrase :</SubTitle>
-                      <SubTitle style={{ marginTop: "3.18rem" }}>bs :</SubTitle>
+                      <LightTitle>Name :</LightTitle>
+                      <LightTitle>catchphrase :</LightTitle>
+                      <LightTitle style={{ marginTop: "3.18rem" }}>
+                        bs :
+                      </LightTitle>
                     </NameDetailsTitleSection>
                     <NameDetailsFillSection>
-                      <Details>{user.company.name}</Details>
-                      <Details>{user.company.catchPhrase}</Details>
-                      <Details>{user.company.bs}</Details>
+                      <Title>{user.company.name}</Title>
+                      <Title>{user.company.catchPhrase}</Title>
+                      <Title>{user.company.bs}</Title>
                     </NameDetailsFillSection>
                   </NameDetailsSection2>
                 </DetailsSubContentWrapper2>
@@ -175,23 +177,23 @@ function Profile({ match }) {
 
               <DetailsContentWrapper2>
                 <AddressNameWrapper>
-                  <SubTitle>Address :</SubTitle>
+                  <LightTitle>Address :</LightTitle>
                 </AddressNameWrapper>
 
                 <AddressWrapper>
                   <AddressDetailsWrapper>
                     <NameDetailsSection3>
                       <AddressDetailsTitleSection>
-                        <SubTitle>Street :</SubTitle>
-                        <SubTitle>Suite :</SubTitle>
-                        <SubTitle>City :</SubTitle>
-                        <SubTitle>Zipcode :</SubTitle>
+                        <LightTitle>Street :</LightTitle>
+                        <LightTitle>Suite :</LightTitle>
+                        <LightTitle>City :</LightTitle>
+                        <LightTitle>Zipcode :</LightTitle>
                       </AddressDetailsTitleSection>
                       <AddressDetailsFillSection>
-                        <Details>{user.address.street}</Details>
-                        <Details>{user.address.suite}</Details>
-                        <Details>{user.address.city}</Details>
-                        <Details>{user.address.zipcode}</Details>
+                        <Title>{user.address.street}</Title>
+                        <Title>{user.address.suite}</Title>
+                        <Title>{user.address.city}</Title>
+                        <Title>{user.address.zipcode}</Title>
                       </AddressDetailsFillSection>
                     </NameDetailsSection3>
                   </AddressDetailsWrapper>

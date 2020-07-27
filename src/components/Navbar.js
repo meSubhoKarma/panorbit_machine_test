@@ -7,10 +7,6 @@ function Navbar({ link }) {
   return (
     <>
       <Nav>
-        <HoverLink to="/landing">
-          <i class="fas fa-chevron-left" />
-        </HoverLink>
-
         <NavLinkWrapper>
           <PrimaryLink to={`/${link}`}>Profile</PrimaryLink>
         </NavLinkWrapper>

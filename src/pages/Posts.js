@@ -11,14 +11,17 @@ import {
   NameWrapper2,
   DropdownContainer,
   DropdownDetails,
-  SoonWrapper,
   ExtraWrapper,
+  SoonWrapper,
 } from "../ui/elements/Wrapper"
 import {
   SubHeader,
   SubTitle,
+  LightSubTitle,
   DropText,
+  Text,
   BanHead,
+  Title,
 } from "../ui/elements/Typography"
 import { ProfileThumb, ProfileSmall } from "../ui/elements/Image"
 import Navbar from "../components/Navbar"
@@ -31,10 +34,10 @@ function Dropdown({ user }) {
     <DropdownContainer>
       <DropdownDetails>
         <ProfileSmall src={`${user.profilepicture}`} />
-        <SubHeader style={{ marginBottom: "0.5rem" }}>{user.name}</SubHeader>
-        <SubTitle style={{ marginTop: "0.2rem", marginBottom: "1.6rem" }}>
+        <SubTitle style={{ marginBottom: "0.5rem" }}>{user.name}</SubTitle>
+        <LightSubTitle style={{ marginTop: "0.2rem", marginBottom: "1.6rem" }}>
           {user.email}
-        </SubTitle>
+        </LightSubTitle>
         <ExtraWrapper>
           <ProfileThumb
             style={{
@@ -45,7 +48,7 @@ function Dropdown({ user }) {
             }}
             src={`${data.users[2].profilepicture}`}
           />
-          <DropText>{data.users[2].name}</DropText>
+          <Text>{data.users[2].name}</Text>
         </ExtraWrapper>
         <ExtraWrapper>
           <ProfileThumb
@@ -57,13 +60,14 @@ function Dropdown({ user }) {
             }}
             src={`${data.users[3].profilepicture}`}
           />
-          <DropText>{data.users[3].name}</DropText>
+          <Text>{data.users[3].name}</Text>
         </ExtraWrapper>
         <SmallButton to="/landing">Sign out</SmallButton>
       </DropdownDetails>
     </DropdownContainer>
   )
 }
+
 function Posts({ match }) {
   const [open, setOpen] = useState(false)
 
@@ -82,7 +86,7 @@ function Posts({ match }) {
           <DetailsSectionWrapper>
             <DetailsTitleWrapper>
               <SectionWrapper3>
-                <SubHeader>Posts</SubHeader>
+                <Title style={{ marginLeft: "0rem" }}>Posts</Title>
               </SectionWrapper3>
 
               <SectionWrapper2>

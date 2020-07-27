@@ -49,8 +49,8 @@ export const PageWrapper = styled.div`
 
 export const Card = styled.div`
   display: flex;
-  width: 36vw;
-  height: 67vh;
+  width: 37vw;
+  height: 66vh;
   flex-direction: column;
   background: var(--white);
   justify-content: center;
@@ -139,7 +139,7 @@ export const Line = styled.div`
 `
 
 export const NavLine = styled.div`
-  width: 70%;
+  width: 100%;
   height: 1px;
   border-radius: 1px;
   background: var(--lightWhite);
@@ -363,7 +363,7 @@ export const DropdownDetails = styled.div`
   padding: 4rem;
 `
 
-export const ExtraWrapper = styled.div`
+export const ExtraWrapper = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -371,6 +371,7 @@ export const ExtraWrapper = styled.div`
   height: auto;
   padding: 1rem 0rem;
   border-top: 1px solid var(--color-light);
+  text-decoration: none;
 `
 
 export const NavLinkWrapper = styled.div`
@@ -429,4 +430,9 @@ export const SoonWrapper = styled.div`
   align-items: center;
   height: 80%;
   width: 100%;
+`
+
+export const Blank = styled.h1`
+  opacity: 0;
+  margin: 0;
 `

@@ -8,6 +8,6 @@ export const Nav = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 4.8rem;
+  padding: 0rem 4.8rem;
   border-radius: 3rem;
 `

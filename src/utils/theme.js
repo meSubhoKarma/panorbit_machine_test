@@ -2,8 +2,8 @@ const theme = {
   colors: {
     primary: `linear-gradient(145deg, rgba(61,88,201,1) 0%, rgba(111,45,200,1) 100%)`,
     secondary: "#3d58c9",
-    advance: "#272727",
-    strong: "#4F4F4F",
+    advance: "#373737",
+    strong: "#595959",
     mild: "#919191",
     light: "#DDDDDD",
   },

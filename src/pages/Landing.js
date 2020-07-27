@@ -10,7 +10,7 @@ import {
   NameWrapper,
   Line,
 } from "../ui/elements/Wrapper"
-import { Title, SubHeader } from "../ui/elements/Typography"
+import { MainTitle, SubHeader } from "../ui/elements/Typography"
 import { ProfileThumb } from "../ui/elements/Image"
 import ScrollArea from "react-scrollbar/dist/no-css"
 
@@ -25,7 +25,7 @@ function Landing() {
           <Wrapper>
             <Card>
               <Board>
-                <Title>Select an account</Title>
+                <MainTitle>Select an account</MainTitle>
               </Board>
               <SmallWrapper>
                 <ScrollArea

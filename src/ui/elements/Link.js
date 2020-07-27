@@ -55,7 +55,7 @@ export const SmallButton = styled(Link)`
   background: #cd5c5c;
   color: white;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 1rem;
   transition: all var(--speed);
 
