@@ -135,7 +135,7 @@ export const Line = styled.div`
   width: 100%;
   height: 1px;
   border-radius: 1px;
-  background: var(--border-color);
+  background: var(--color-light);
 `
 
 export const NavLine = styled.div`

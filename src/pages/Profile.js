@@ -53,7 +53,7 @@ import { SmallButton } from "../ui/elements/Link"
 import Map from "../assets/map.jpg"
 import data from "../data/data.json"
 
-function Dropdown({ user }) {
+function Dropdown({ user, user1, user2, user3, user4 }) {
   return (
     <DropdownContainer>
       <DropdownDetails>
@@ -62,30 +62,58 @@ function Dropdown({ user }) {
         <LightSubTitle style={{ marginTop: "0.2rem", marginBottom: "1.6rem" }}>
           {user.email}
         </LightSubTitle>
-        <ExtraWrapper to={`/${data.users[2].id}`}>
-          <ProfileThumb
-            style={{
-              width: "3.2rem",
-              height: "3.2rem",
-              borderRadius: "3.2rem",
-              marginRight: "0.2rem",
-            }}
-            src={`${data.users[2].profilepicture}`}
-          />
-          <Text>{data.users[2].name}</Text>
-        </ExtraWrapper>
-        <ExtraWrapper to={`/${data.users[3].id}`}>
-          <ProfileThumb
-            style={{
-              width: "3.2rem",
-              height: "3.2rem",
-              borderRadius: "3.2rem",
-              marginRight: "0.2rem",
-            }}
-            src={`${data.users[3].profilepicture}`}
-          />
-          <Text>{data.users[3].name}</Text>
-        </ExtraWrapper>
+        {user1 === undefined ?
+          (<ExtraWrapper to={`/${user3.id}`}>
+            <ProfileThumb
+              style={{
+                width: "3.2rem",
+                height: "3.2rem",
+                borderRadius: "3.2rem",
+                marginRight: "0.2rem",
+              }}
+              src={`${user3.profilepicture}`}
+            />
+            <Text>{user3.name}</Text>
+          </ExtraWrapper>) :
+          (<ExtraWrapper to={`/${user1.id}`}>
+            <ProfileThumb
+              style={{
+                width: "3.2rem",
+                height: "3.2rem",
+                borderRadius: "3.2rem",
+                marginRight: "0.2rem",
+              }}
+              src={`${user1.profilepicture}`}
+            />
+            <Text>{user1.name}</Text>
+          </ExtraWrapper>)
+        }
+        {user2 === undefined ?
+          (<ExtraWrapper to={`/${user4.id}`}>
+            <ProfileThumb
+              style={{
+                width: "3.2rem",
+                height: "3.2rem",
+                borderRadius: "3.2rem",
+                marginRight: "0.2rem",
+              }}
+              src={`${user4.profilepicture}`}
+            />
+            <Text>{user4.name}</Text>
+          </ExtraWrapper>) :
+          (<ExtraWrapper to={`/${user2.id}`}>
+            <ProfileThumb
+              style={{
+                width: "3.2rem",
+                height: "3.2rem",
+                borderRadius: "3.2rem",
+                marginRight: "0.2rem",
+              }}
+              src={`${user2.profilepicture}`}
+            />
+            <Text>{user2.name}</Text>
+          </ExtraWrapper>)
+        }
         <SmallButton to="/landing">Sign out</SmallButton>
       </DropdownDetails>
     </DropdownContainer>
@@ -95,10 +123,19 @@ function Dropdown({ user }) {
 function Profile({ match }) {
   const [open, setOpen] = useState(false)
 
-  const getEvent = (profile) => {
-    return data.users.find((e) => e.id === profile)
+  const getEvent = (profileId) => {
+    return data.users.find((e) => e.id === profileId)
   }
+  
   const user = getEvent(parseInt(match.params.profileId))
+
+  const user1 = getEvent(parseInt(match.params.profileId) + 1)
+
+  const user2 = getEvent(parseInt(match.params.profileId) + 2)
+
+  const user3 = getEvent(parseInt(match.params.profileId) - 1)
+
+  const user4 = getEvent(parseInt(match.params.profileId) - 2)
 
   return (
     <>
@@ -122,7 +159,7 @@ function Profile({ match }) {
                     </SubHeader>
                   </NameWrapper2>
 
-                  {open && <Dropdown user={user} />}
+                  {open && <Dropdown user={user} user1={user1} user2={user2} user3={user3} user4={user4} />}
                 </>
               </SectionWrapper2>
             </DetailsTitleWrapper>
