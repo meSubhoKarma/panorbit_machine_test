@@ -18,6 +18,14 @@ export const Wrapper = styled.div`
   align-items: center;
 `
 
+export const Wrapper2 = styled.div`
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`
+
 export const ViewWrapper = styled.div`
   display: flex;
   width: 75%;

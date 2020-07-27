@@ -3,11 +3,20 @@
   padding: 0;
 }
 
+.container {
+  background-image: url(back.png);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+}
+
 section {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(145deg, rgba(61, 88, 201, 1) 0%, rgba(111, 45, 200, 1) 100%);
+  background: url(back.png);
   overflow: hidden;
 }
 
